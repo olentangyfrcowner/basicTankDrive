@@ -7,18 +7,12 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class DriveTrain extends Subsystem {
 
-	public void move(double left, double right) {
-		 /*RobotMap.driveTrainBL.set(-left);
-		 RobotMap.driveTrainBR.set(-right);
-		 RobotMap.driveTrainFL.set(left);
-		 RobotMap.driveTrainFR.set(right);*/
-		 
-		 RobotMap.driveTrain.tankDrive(-left, -right);
+	public void move(double left, double right) { //Grabs the left and right values that get passed by "TankDrive"
+		 RobotMap.driveTrain.tankDrive(-left, -right); //Use those values for the method "tankDrive" which calls for joystick values
 	}
 	
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
-		setDefaultCommand(new TankDrive());
+		setDefaultCommand(new TankDrive()); //This subsystem will automatically run this command 
 	}
 }

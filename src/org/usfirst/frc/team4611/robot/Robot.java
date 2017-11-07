@@ -33,7 +33,9 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
-		RobotMap.init();
+		RobotMap.init(); //Run the method "init" in RobotMap
+		
+		//Initialize the subsystems
 		tankDrive = new DriveTrain();
 		oi = new OI();
 	}
